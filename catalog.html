@@ -7,81 +7,105 @@
 </head>
 
 <body>
-  <header class="#">
-    <nav>
-      <img src="#" alt="Логотип Gllacy Shop">
-      <ul>
-        <li>
+  <header class="page-header">
+    <nav class="navigation">
+      <img class="logo  navigation__logo" src="#" alt="Логотип Gllacy Shop">
+      <ul class="navigation-list">
+        <li class="navigation-list__item">
           <a href="#">Каталог</a>
-          <ul>
-            <li><a href="#">Новинки</a></li>
-            <li><a href="catalog.html">Сливочное</a></li>
-            <li><a href="#">Щербеты</a></li>
-            <li><a href="#">Фруктовый лед</a></li>
-            <li><a href="#">Мелорин</a></li>
+          <ul class="nested-list navigation__nested-list">
+            <li class="nested-list__item"><a class="nested-list__link nested-list__link--heading" href="#">Новинки</a></li>
+            <li class="nested-list__item"><a class="nested-list__link" href="catalog.html">Сливочное</a></li>
+            <li class="nested-list__item"><a class="nested-list__link" href="#">Щербеты</a></li>
+            <li class="nested-list__item"><a class="nested-list__link" href="#">Фруктовый лед</a></li>
+            <li class="nested-list__item"><a class="nested-list__link" href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">О компании</a></li>
-      </ul>
-      <ul>
-        <li><a href="">Вход</a></li>
-        <li>
-          <a href="">2 товара</a>
-          <div>
-
-          </div>
-        </li>
+        <li class="navigation-list__item"><a href="#">Доставка и оплата</a></li>
+        <li class="navigation-list__item"><a href="#">О компании</a></li>
       </ul>
     </nav>
-    <!--форма поиска -->
-    <p><span>C 10 до 20, ежедневно</span>
-      <br>
-      <a href="tel:8812450525207">8 812 450-25-25</a>
+    <ul class="user-navigation">
+      <li class="user-navigation__item">
+        <!--форма поиска -->
+      </li>
+      <li class="user-navigation__item">
+        <a href="#">Вход</a>
+        <!-- Форма входа-->
+      </li>
+      <li class="user-navigation__item">
+        <a class="shopping-cart-link" href="#">Пусто</a>
+        <!-- Выпадающая часть корзины-->
+        <div class="shopping-cart-nested">
+          <ul class="shopping-cart-nested__list">
+            <li class="shopping-cart-nested__item">
+              <img class="shopping-cart-nested__preview" src="#" alt="#">
+              <p class="shopping-cart-nested__description">Пломбир с апельсиновым джемом</p>
+              <p class="shopping-cart-nested__quantity">1,5 кг х<span class="shopping-cart-nested__price">200 руб.</span></p>
+              <p class="shopping-cart-nested__cost">300 руб.</p>
+            </li>
+            <li class="shopping-cart-nested__item">
+              <img class="shopping-cart-nested__preview" src="#" alt="#">
+              <p class="shopping-cart-nested__description">Клубничный пломбир с присыпкой из белого шоколада</p>
+              <p class="shopping-cart-nested__quantity">1,5 кг х<span class="shopping-cart-nested__price">300 руб.</span></p>
+              <p class="shopping-cart-nested__cost">450 руб.</p>
+            </li>
+          </ul>
+          <strong class="shopping-cart-nested__cost">Итого: 750 руб.</strong>
+          <a class="button shopping-cart-nested__button" href="#">Оформить заказ</a>
+        </div>
+      </li>
+    </ul>
+    <!--Тут кривизна. 1. Нужен ли тут P. 2.  -->
+    <p class="contacts">
+      <span>C 10 до 20, ежедневно</span>
+      <a class="telephone " href="tel:8812450525207">8 812 450-25-25</a>
     </p>
   </header>
-  <main>
-    <h1>Сливочное мороженное</h1>
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="#">Каталог</a></li>
-      <li><a>Сливочное</a></li>
+  <main class="inner-page">
+    <h1 class="inner-page__title">Сливочное мороженное</h1>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs-item"><a class="link breadcrumbs-item__link" href="index.html">Главная</a></li>
+      <li class="breadcrumbs-item"><a class="link breadcrumbs-item__link" href="#">Каталог</a></li>
+      <li class="breadcrumbs-item"><a class="link breadcrumbs-item__link breadcrumbs-item__link--current">Сливочное</a></li>
     </ul>
     <!--Форма сортировки-->
-    <ul>
-      <li>
-        <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-        <img src="#" alt="#">
-        <p>310₽ <span>/кг</span></p>
-        <a href="#">Быстрый просмотр</a>
+    <ul class="catalog-list inner-page__catalog-list">
+      <li class="catalog-item">
+        <h3 class="catalog-item__title">
+          <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+        </h3>
+        <img class="catalog-item__image" src="#" alt="#">
+        <span class="catalog-item__flag">хит</span>
+        <p class="catalog-item__price">310₽ <span class="catalog-item__price--measure">/кг</span></p>
+        <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
       </li>
-    <!--+ еще 11 блоков -->
+      <!--+ еще 11 блоков -->
     </ul>
-    <ul>
-      <li><a href="#1"></a></li>
-      <li><a href="#2"></a></li>
-      <li><a href="#3"></a></li>
-      <li><a href="#4"></a></li>
-      <li><a href="#5"></a></li>
-      <li><a href="#next"></a></li>
+    <ul class="paginator">
+      <li class="paginator-item "><a class="paginator-item__link paginator-item__link--disable" href="#back"></a></li>
+      <li class="paginator-item "><a class="paginator-item__link paginator-item__link--current"></a></li>
+      <li class="paginator-item "><a class="paginator-item__link" href="#2"></a></li>
+      <li class="paginator-item "><a class="paginator-item__link" href="#3"></a></li>
+      <li class="paginator-item "><a class="paginator-item__link" href="#4"></a></li>
+      <li class="paginator-item "><a class="paginator-item__link" href="#5"></a></li>
+      <li class="paginator-item "><a class="paginator-item__link" href="#next"></a></li>
     </ul>
   </main>
-  <footer>
-    <ul>
-      <li><a href="https://twitter.com/htmlacademy_ru?lang=ru">Twitter</a></li>
-      <li><a href="https://www.instagram.com/htmlacademy/?hl=ru">Instagram</a></li>
-      <li><a href="https://www.facebook.com/htmlacademy/">Facebook</a></li>
-      <li><a href="https://vk.com/htmlacademy">Vkontakte</a></li>
+  <footer class="page-footer">
+    <ul class="social-list">
+      <li class="social-item"><a class="social-item__link social-item__link--twitter " href="https://twitter.com/htmlacademy_ru?lang=ru">Twitter</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--instagram " href="https://www.instagram.com/htmlacademy/?hl=ru">Instagram</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--facebook " href="https://www.facebook.com/htmlacademy/">Facebook</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--vkontakte " href="https://vk.com/htmlacademy">Vkontakte</a></li>
     </ul>
-    <nav>
-      <ul>
-        <li><a href="#">Для поставщиков</a></li>
-        <li><a href="#">Наши документы</a></li>
-        <li><a href="#">О производстве</a></li>
-        <li><a href="#">Экологические стандарты</a></li>
-      </ul>
-    </nav>
-    <p>Сделано в <a href="#">HTML Академии </a>© 2019</p>
+    <ul class="legal-list">
+      <li class="legal-item"><a class="link legal-item__link  legal-item__link--accent" href="#">Для поставщиков</a></li>
+      <li class="legal-item"><a class="link legal-item__link " href="#">Наши документы</a></li>
+      <li class="legal-item"><a class="link legal-item__link " href="#">О производстве</a></li>
+      <li class="legal-item"><a class="link legal-item__link " href="#">Экологические стандарты</a></li>
+    </ul>
+    <p class="copyright">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Академии</a>© 2019</p>
   </footer>
 </body>
 
