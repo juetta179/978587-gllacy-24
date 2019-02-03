@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="background-color: red;">
+<body>
   <header class="page-header">
     <nav class="navigation">
       <img class="logo  navigation__logo" src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
@@ -27,14 +28,28 @@
     </nav>
     <ul class="user-navigation">
       <li class="user-navigation__item">
+        <button class="user-navigation__icon user-navigation__icon--search" type="button" name="button-search-icon" aria-label="При наведении показывается форма поискаg сайту"></button>
         <!--форма поиска -->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get" aria-label="Поиск по сайту">
+          <input class="input search-form__input" type="search" name="search" placeholder="Что ищем?">
+          <button class="search-form__button" type="submit">Найти</button>
+        </form>
       </li>
       <li class="user-navigation__item">
-        <a href="#">Вход</a>
+        <a class="user-navigation__icon user-navigation__icon--login" href="#">Вход</a>
         <!-- Форма входа-->
+        <form class="user-navigation__form-login form-login" action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа в личный кабинет">
+          <input class="input form-login__input" type="email" name="login" placeholder="Электронная почта">
+          <input class="input form-login__input" type="password" name="password" placeholder="Пароль">
+          <button class="button form-login__button" type="submit">Войти</button>
+          <div class="form-login__wrapper form-login__wrapper--right">
+            <a href="#" class="link">Забыли пароль?</a>
+            <a href="#" class="link">Новая регистрация</a>
+          </div>
+        </form>
       </li>
       <li class="user-navigation__item">
-        <a class="shopping-cart-link" href="#">Пусто</a>
+        <a class="user-navigation__icon shopping-cart-icon shopping-cart-icon--full" href="#" aria-label="Корзина: Пусто">Пусто</a>
       </li>
     </ul>
     <p class="contacts">
@@ -49,18 +64,14 @@
       <ol class="slider__list">
         <li class="slider__item">
           <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
-          <!--Корректно тут "slider__image" или все же нужноспустить все на уровень ниже и "slider-item__image"-->
-          <img class="slider__image" src="img/slider-ice-1.png" width="1100" height="900" alt="Два рожка мороженного">
           <a class="button slider__button" href="#">Дайте оба!</a>
         </li>
         <li class="slider__item">
           <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
-          <img class="slider__image" src="img/slider-ice-2.png" width="1100" height="900" alt="Два рожка мороженного">
           <a class="button slider__button" href="#">Дайте оба!</a>
         </li>
         <li class="slider__item">
           <h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
-          <img class="slider__image" src="img/slider-ice-3.png" width="1100" height="900" alt="Два рожка мороженного">
           <a class="button slider__button" href="#">Дайте оба!</a>
         </li>
       </ol>
@@ -153,7 +164,7 @@
       </article>
       <section class="subscription">
         <h3 class="visually-hidden">Подписка на рассылку новостей</h3>
-        <p class="text subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно = </p>
+        <p class="text subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
         <!--Тут будет форма-->
       </section>
     </section>
@@ -177,10 +188,10 @@
   </main>
   <footer class="page-footer">
     <ul class="social-list">
-      <li class="social-item"><a class="social-item__link social-item__link--twitter " href="https://twitter.com/htmlacademy_ru?lang=ru">Twitter</a></li>
-      <li class="social-item"><a class="social-item__link social-item__link--instagram " href="https://www.instagram.com/htmlacademy/?hl=ru">Instagram</a></li>
-      <li class="social-item"><a class="social-item__link social-item__link--facebook " href="https://www.facebook.com/htmlacademy/">Facebook</a></li>
-      <li class="social-item"><a class="social-item__link social-item__link--vkontakte " href="https://vk.com/htmlacademy">Vkontakte</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--twitter " href="https://twitter.com/htmlacademy_ru?lang=ru">HTML Академия в Twitter</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--instagram " href="https://www.instagram.com/htmlacademy/?hl=ru">HTML Академия в Instagram</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--facebook " href="https://www.facebook.com/htmlacademy/">HTML Академия в Facebook</a></li>
+      <li class="social-item"><a class="social-item__link social-item__link--vkontakte " href="https://vk.com/htmlacademy">HTML Академия в Vkontakte</a></li>
     </ul>
     <ul class="legal-list">
       <li class="legal-item"><a class="link legal-item__link  legal-item__link--accent" href="#">Для поставщиков</a></li>
@@ -189,12 +200,21 @@
       <li class="legal-item"><a class="link legal-item__link" href="#">Экологические стандарты</a></li>
     </ul>
     <div class="copyright">
-      <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__logo-link"><img class="copyright__logo" src="img/logo-htmlacademy.svg " alt="Логотип htmlacademy" width="110" height="40" ></a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__logo-link"><img class="copyright__logo" src="img/logo-htmlacademy.svg " alt="Логотип htmlacademy" width="110" height="40"></a>
       <p class="text copyright__text">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Академии</a>© 2019</p>
     </div>
   </footer>
-  <section>
+  <section class="feedback">
     <!--Форма обратной связи-->
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p class="text feedback__text">Мы обязательно Вам ответим! </p>
+    <form class="feedback-form" action="index.html" method="post">
+      <input class="input feedback-form__input" type="text" name="feedback-name" placeholder="Как Вас зовут?">
+      <input class="input feedback-form__input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+      <textarea class="input feedback-form__input" name="feedback-text" rows="6" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+      <button class="button feedback__button" type="submit" name="button">Отправить</button>
+      <button class="feedback__button-close" type="button" name="button-close" aria-label="Закрыть форму"></button>
+    </form>
   </section>
 </body>
 
