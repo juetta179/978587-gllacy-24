@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
+  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+  <div class="site-wrapper">
   <div class="convert">
   <header class="page-header">
     <img class="logo  navigation__logo header__column-rigth" src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
@@ -66,31 +71,43 @@
     <h1 class="visually-hidden"> Магазин мороженного "Gllacy Shop"</h1>
     <section class="slider">
       <h2 class="visually-hidden">Актуальные предложения</h2>
-      <ol class="slider__list">
-        <li class="slider__item">
-          <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
-          <a class="button slider__button" href="#">Дайте оба!</a>
-        </li>
-        <li class="slider__item">
-          <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
-          <a class="button slider__button" href="#">Дайте оба!</a>
-        </li>
-        <li class="slider__item">
-          <h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
-          <a class="button slider__button" href="#">Дайте оба!</a>
-        </li>
-      </ol>
-    </section>
+          <div class="slider-controls">
+            <label for="product-1">Первый</label>
+            <label for="product-2">Второй</label>
+            <label for="product-3">Третий</label>
+          </div>
+          <ul class="slider-list">
+            <li class="slider-item slide" id="slide1">
+              <h3 class="slide-title">
+                Крем-брюле и пломбир с малиновым джемом
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide2">
+              <h3 class="slide-title">
+                Шоколадный пломбир и лимонный сорбет
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide3">
+              <h3 class="slide-title">
+                Пломбир с помадкой и клубничный щербет
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+          </ul>
+        </section>
+
     <section class="stock">
       <h2 class="visually-hidden">Акции</h2>
       <ul class="stock__list">
-        <li class="stock-item">
-          <h3 class="stock-item__title">Малинка даром!</h3>
+        <li class="stock-item  stock-item--raspberries">
+          <h3 class="stock-item__title ">Малинка даром!</h3>
           <p class="text stock-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
           <a class="button stock-item__button" href="#">Хочу варенье!</a>
         </li>
-        <li class="stock-item">
+        <li class="stock-item  stock-item--chocolate">
           <h3 class="stock-item__title">Шоколадки даром!</h3>
           <p class="text stock-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
@@ -107,7 +124,7 @@
           </h3>
           <img class="catalog-item__image" src="img/catalog-preview-4.png" width="267" height="267" alt="Мороженное жетлого цвета с белыми прожилками">
           <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310₽ <span class="catalog-item__price catalog-item__price--measure">/кг</span></p>
+          <p class="catalog-item__price">310₽</p> <span class="catalog-item__price catalog-item__price--measure">/кг</span>
           <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
@@ -116,7 +133,7 @@
           </h3>
           <img class="catalog-item__image" src="img/catalog-preview-6.png" width="267" height="267" alt="Мороженное светло-коричневого цвета с присыпкой из тертого шоколада">
           <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310₽ <span class="catalog-item__measure">/кг</span></p>
+          <p class="catalog-item__price">310₽</p> <span class="catalog-item__measure">/кг</span>
           <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
@@ -125,7 +142,7 @@
           </h3>
           <img class="catalog-item__image" src="img/catalog-preview-7.png" width="267" height="267" alt="Мороженное свето-розового цвета с присыпкой из белых и розовых сердечек  ">
           <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310₽ <span class="catalog-item__price catalog-item__price--measure">/кг</span></p>
+          <p class="catalog-item__price">310₽</p> <span class="catalog-item__price catalog-item__price--measure">/кг</span>
           <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
@@ -143,19 +160,19 @@
       <h2 class="visually-hidden">Преимущества</h2>
       <p class=" text  advantages__description">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="advantages-list">
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item--ice-cream">
           <p class="text advantages-item__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item--cow">
           <p class="text advantages-item__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
           </p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item  advantages-item--eco">
           <p class="text advantages-item__text">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
           </p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item--thermometer">
           <p class="text advantages-item__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
           </p>
         </li>
@@ -163,11 +180,11 @@
     </section>
     <section class="news">
       <h2 class="visually-hidden">Новости блога</h2>
-      <article class="news-article">
+      <article class="news-article news__item">
         <h3 class="news-article__title">Новое в нашем блоге</h3>
         <a class=" link news-article__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
-      <section class="subscription">
+      <section class="subscription news__item">
         <h3 class="visually-hidden">Подписка на рассылку новостей</h3>
         <p class="text subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
 
@@ -216,6 +233,7 @@
       <p class="text copyright__text">Сделано в <a class="link copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Академии</a> © 2019</p>
     </div>
   </footer>
+</div>
 </div>
   <section class="feedback popup-form">
     <!--Форма обратной связи-->
