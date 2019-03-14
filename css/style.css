@@ -823,13 +823,25 @@ html {
 
 .subscription__text {}
 
-.contacts {}
+.contacts {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
 
 .contacts-wrapper {
+  position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: white;
+  width: 300px;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  border-radius: 15px;
 }
 
 .contacts__text {}
@@ -840,47 +852,114 @@ html {
   font-style: normal;
 }
 
-.contacts__button {}
+.contacts__button {
+  text-shadow: none;
+}
 
-.map {}
+.map {
+  width: 100%;
+}
 
 .contacts__map {}
 
-.page-footer {}
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .social-list {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 60px;
 }
 
-.social-item {}
+.social-item {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+}
 
-.social-item__link {}
+.social-item__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: solid 2px #c2cec7;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-.social-item__link--twitter {}
+.social-item__link--twitter {
+  background-image: url("../img/twitter.svg");
+}
 
-.social-item__link--instagram {}
+.social-item__link--instagram {
+  background-image: url("../img/instagram.svg");
+}
 
-.social-item__link--facebook {}
+.social-item__link--facebook {
+  background-image: url("../img/fb.svg");
+}
 
-.social-item__link--vkontakte {}
+.social-item__link--vkontakte {
+  background-image: url("../img/vk.svg");
+}
 
-.legal-list {}
+.legal-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  height: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 100px;
+}
 
 .legal-item {
   display: block;
+  padding-left: 30px;
 }
 
 .legal-item__link {
   font-size: 13px;
   line-height: 18px;
   font-weight: 300;
+  display: block;
+  text-align: left;
 }
 
 .legal-item__link--accent {
   font-weight: 900;
+  position: relative;
+  display: block;
 }
 
-.copyright {}
+.legal-item__link--accent::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.copyright {
+  margin-left: auto;
+}
 
 .copyright__logo-link {}
 
