@@ -47,7 +47,7 @@ html {
   visibility: hidden;
 }
 
-.site-wrapper::before {
+5 .site-wrapper::before {
   background-image: url("../img/slider-ice-2.png");
 }
 
@@ -209,7 +209,9 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 100%
+  width: 100%;
+  margin-top: 7px;
+  align-items: flex-start;
 }
 
 .header__column-left {
@@ -229,19 +231,22 @@ html {
 
 .logo {}
 
-.navigation__logo {}
+.navigation__logo {
+  position: relative;
+}
 
 .navigation-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 0px;
-  padding-left: 0px;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 11px;
+  margin-top: 10px;
 }
 
 .navigation-list__item {
-  padding-left: 20px;
   position: relative;
 }
 
@@ -250,24 +255,28 @@ html {
   color: white;
   font-weight: 900;
   font-size: 16px;
-  text-decoration: none;
+  text-decoration: underline;
   line-height: 22px;
   display: block;
   text-align: left;
   background-color: transparent;
   border-radius: 50px;
-  padding: 5px;
+  padding: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .navigation-list__link:hover {
   background-color: white;
   color: black;
+  text-decoration: none;
 }
 
 .navigation-list__link:active {
   background-color: white;
   color: black;
   box-shadow: inset 0px 2px 1px 1px #696969;
+  text-decoration: none;
 }
 
 .navigation-list__link--current {
@@ -340,7 +349,7 @@ html {
 
 .user-navigation {
   list-style: none;
-  margin-left: 0;
+  margin: 0px;
   padding-left: 0;
   display: flex;
   flex-direction: row;
@@ -349,7 +358,7 @@ html {
 
 .user-navigation__item {
   display: block;
-  margin-left: 10px;
+  padding: 10px;
   position: relative;
 }
 
@@ -365,7 +374,7 @@ html {
   font-family: roboto, arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 14px;
 }
 
 .user-navigation__icon:hover {
