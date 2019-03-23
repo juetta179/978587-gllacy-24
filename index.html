@@ -15,7 +15,7 @@
   <div class="site-wrapper">
     <div class="convert">
       <header class="page-header">
-        <img class="logo  navigation__logo header__column-rigth" src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
+        <img class="logo  navigation__logo header__column-left" src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
         <nav class="navigation header__column-center">
           <ul class="navigation-list">
             <li class="navigation-list__item">
@@ -32,7 +32,7 @@
             <li class="navigation-list__item"><a class="navigation-list__link" href="#">О Компании</a></li>
           </ul>
         </nav>
-        <div class="header__column-left">
+        <div class="header__column-right">
           <ul class="user-navigation">
             <li class="user-navigation__item">
               <button class="user-navigation__icon user-navigation__icon--search" type="button" name="button-search-icon" aria-label="При наведении показывается форма поискаg сайту"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -45,7 +45,7 @@
               </form>
             </li>
             <li class="user-navigation__item">
-              <a class="user-navigation__icon user-navigation__icon--login" href="#">Вход</a>
+              <a class="user-navigation__icon user-navigation__icon--login" href="#"><svg class="user-navigation__button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg> Вход</a>
               <!-- Форма входа-->
               <form class=" form-login user-navigation__form-login popup-form user-navigation__popup-form" action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа в личный кабинет">
                 <input class="input form-login__input" type="email" name="login" placeholder="Электронная почта">
@@ -58,7 +58,15 @@
               </form>
             </li>
             <li class="user-navigation__item">
-              <a class="user-navigation__icon shopping-cart-icon shopping-cart-icon--full" href="#" aria-label="Корзина: Пусто">Пусто</a>
+              <a class="user-navigation__icon shopping-cart-icon " href="#" aria-label="Корзина: Пусто">
+                <svg class="user-navigation__button-icon"  xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewbox="0 0 21 20">
+                  <g fill="#fff">
+                    <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
+                    <circle cx="6.984" cy="18" r="2" />
+                    <circle cx="15.984" cy="18" r="2" />
+                  </g>
+                </svg>
+                Пусто</a>
             </li>
           </ul>
           <p class="header-contacts">
@@ -99,7 +107,6 @@
             </li>
           </ul>
         </section>
-
         <section class="stock">
           <h2 class="visually-hidden">Акции</h2>
           <ul class="stock__list">
@@ -195,34 +202,33 @@
             <a class=" link news-article__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
           </article>
           <div class="subscription-conteiner news__item">
-          <section class="subscription ">
-            <h3 class="visually-hidden">Подписка на рассылку новостей</h3>
-            <p class="text subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-
-            <form class="subscription-form subscription__subscription-form" action="https://echo.htmlacademy.ru" method="get" aria-label="Оставить элекnронную почту для подписки на новости">
-              <input class="input subscription-form__input" type="search" name="search" placeholder="Что ищем?">
-              <button class="button subscription-form__button" type="submit">Найти</button>
-            </form>
-          </section>
-        </div>
+            <section class="subscription ">
+              <h3 class="visually-hidden">Подписка на рассылку новостей</h3>
+              <p class="text subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+              <form class="subscription-form subscription__subscription-form" action="https://echo.htmlacademy.ru" method="get" aria-label="Оставить элекnронную почту для подписки на новости">
+                <input class="input subscription-form__input" type="search" name="search" placeholder="Что ищем?">
+                <button class="button subscription-form__button" type="submit">Найти</button>
+              </form>
+            </section>
+          </div>
         </section>
       </div>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="convert">
-        <div class="contacts-wrapper">
-          <p class="text contacts__text">Адрес главного офиса и&#160;офлайн&#8209;магазина:</p>
-          <address property="address" typeof="PostalAddress">
-            <span class="text contacts__text contacts__text--address" property="streetAddress"> ул. Большая Конюшенная 19/8,</span>
-            <span class="text contacts__text contacts__text--address" property="addressLocality"> Санкт&#8209;Петербург </span>
-          </address>
-          <p class="text contacts__text">Для заказов по телефону:
-            <a class="telephone contacts__telephone" href="tel:8812450525207" property="telephone">8&#160;812&#160;450&#8209;25&#8209;25</a>
-            (c&#160;10&#160;до&#160;20&#160;ежедневно)
-          </p>
-          <a class="button contacts__button" href="contacts.html">Форма обратной связи</a>
+          <div class="contacts-wrapper">
+            <p class="text contacts__text">Адрес главного офиса и&#160;офлайн&#8209;магазина:</p>
+            <address property="address" typeof="PostalAddress">
+              <span class="text contacts__text contacts__text--address" property="streetAddress"> ул. Большая Конюшенная 19/8,</span>
+              <span class="text contacts__text contacts__text--address" property="addressLocality"> Санкт&#8209;Петербург </span>
+            </address>
+            <p class="text contacts__text">Для заказов по телефону:
+              <a class="telephone contacts__telephone" href="tel:8812450525207" property="telephone">8&#160;812&#160;450&#8209;25&#8209;25</a>
+              (c&#160;10&#160;до&#160;20&#160;ежедневно)
+            </p>
+            <a class="button contacts__button" href="contacts.html">Форма обратной связи</a>
+          </div>
         </div>
-      </div>
         <iframe class="map contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1552592112877"
           width="100%" height="450" frameborder="0" style="border:0"></iframe>
         <!--https://www.w3.org/TR/html/grouping-content.html#the-address-element-->
@@ -250,18 +256,18 @@
     </div>
   </div>
   <div class="feedback-convert">
-  <section class="feedback popup-form">
-    <!--Форма обратной связи-->
-    <h2 class="visually-hidden">Форма обратной связи</h2>
-    <p class="text feedback__text">Мы обязательно Вам ответим! </p>
-    <form class="feedback-form" action="index.html" method="post">
-      <input class="input feedback-form__input" type="text" name="feedback-name" placeholder="Как Вас зовут?">
-      <input class="input feedback-form__input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-      <textarea class="input feedback-form__input" name="feedback-text" rows="6" cols="80" placeholder="Напишите что-нибудь..."></textarea>
-      <button class="button feedback__button" type="submit" name="button">Отправить</button>
-      <button class="feedback__button-close" type="button" name="button-close" aria-label="Закрыть форму"></button>
-    </form>
-  </section>
+    <section class="feedback popup-form">
+      <!--Форма обратной связи-->
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <p class="text feedback__text">Мы обязательно Вам ответим! </p>
+      <form class="feedback-form" action="index.html" method="post">
+        <input class="input feedback-form__input" type="text" name="feedback-name" placeholder="Как Вас зовут?">
+        <input class="input feedback-form__input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+        <textarea class="input feedback-form__input" name="feedback-text" rows="6" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+        <button class="button feedback__button" type="submit" name="button">Отправить</button>
+        <button class="feedback__button-close" type="button" name="button-close" aria-label="Закрыть форму"></button>
+      </form>
+    </section>
   </div>
 </body>
 
