@@ -59,7 +59,7 @@
           </li>
           <li class="user-navigation__item">
             <a class="user-navigation__icon shopping-cart-icon shopping-cart-icon--full" href="#" aria-label="Корзина: 2 товара">
-              <svg class="user-navigation__button-icon"  xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewbox="0 0 21 20">
+              <svg class="user-navigation__button-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewbox="0 0 21 20">
                 <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
                 <circle fill="#343434" cx="6.984" cy="18" r="2" />
                 <circle fill="#343434" cx="15.984" cy="18" r="2" />
@@ -99,69 +99,58 @@
         <li class="breadcrumbs-item"><a class="link breadcrumbs-item__link" href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a class="link breadcrumbs-item__link breadcrumbs-item__link--current">Сливочное</a></li>
       </ul>
-      <h1 class="inner-page__title">Сливочное мороженное</h1>
+      <h1 class="inner-page__title">Сливочное мороженое</h1>
 
       <!--Форма сортировки-->
       <section class="sorting">
         <form class="form-sorting" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="sorting__fieldset">
             <legend class="sorting__legend">Сортировка:</legend>
-            <select class="sorting__input sorting-item-wrapper" name="sorting-type">
-              <option value="by-popularity">по популярности</option>
-              <option value="cheap-first">сначала недорогие</option>
-              <option value="dear-first">сначала дорогие</option>
-              <option value="fatty-fatty">по жирности</option>
-            </select>
+            <div class="sorting__select-wrapper">
+              <select class="sorting__select sorting-item-wrapper" name="sorting-type">
+                <option class="sorting__select-item" value="by-popularity">по популярности</option>
+                <option class="sorting__select-item" value="cheap-first">сначала недорогие</option>
+                <option class="sorting__select-item" value="dear-first">сначала дорогие</option>
+                <option class="sorting__select-item" value="fatty-fatty">по жирности</option>
+              </select>
+            </div>
           </fieldset>
           <fieldset class="sorting__fieldset">
-            <legend>Цена: 100руб. -500руб.</legend>
-            <div class="sorting-item-wrapper"></div>
+            <legend class= "sorting__legend">Цена: 100руб. - 500руб.</legend>
+            <div class="sorting-item-wrapper sorting-item-wrapper--toggle">
+              <div class=" toggle toggle--1"></div>
+              <div class=" toggle toggle--2"></div>
+              <div class="rail rail--1"></div>
+              <div class="rail rail--2"></div>
+            </div>
             <!--Ползунки -->
           </fieldset>
           <fieldset class="sorting__fieldset">
             <legend class="sorting__legend">Жирность:</legend>
             <div class="sorting-item-wrapper">
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="0">
-                0%
-              </label>
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="up-to-10" checked>
-                до 10%
-              </label>
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="up-to-30">
-                до 30%
-              </label>
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="more-then-30">
-                выше 30%
-              </label>
+              <input id="fat-percentage--0" class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="0">
+              <label for="fat-percentage--0" class="sorting__label">0%</label>
+              <input id="fat-percentage--up-to-10" class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="up-to-10" checked>
+              <label for="fat-percentage--up-to-10" class="sorting__label">до 10%</label>
+              <input id="fat-percentage--up-to-30" class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="up-to-30">
+              <label for="fat-percentage--up-to-30" class="sorting__label">до 30%</label>
+              <input id="fat-percentage--more-then-30" class="sorting__input sorting__input--type-radio" type="radio" name="fat-percentage" value="more-then-30">
+              <label for="fat-percentage--more-then-30" class="sorting__label"> выше 30%</label>
             </div>
           </fieldset>
           <fieldset class="sorting__fieldset">
             <legend class="sorting__legend">Наполнители:</legend>
             <div class="sorting-item-wrapper">
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-chocolate">
-                шоколадные
-              </label>
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-sugar">
-                сахарные присыпки
-              </label>
-              <label>
-                <input class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-fruits">
-                фрукты
-              </label>
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-syrup">
-                сиропы
-              </label>
-              <label class="sorting__label">
-                <input class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-jam">
-                джемы
-              </label>
+              <input id="filler-chocolate" class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-chocolate">
+              <label for="filler-chocolate" class="sorting__label"> шоколадные </label>
+              <input id="filler-sugar" class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-sugar">
+              <label for="filler-sugar" class="sorting__label"> сахарные присыпки </label>
+              <input id="filler-fruits" class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-fruits">
+              <label for="filler-fruits" class="sorting__label"> фрукты </label>
+              <input id="filler-syrup" class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-syrup">
+              <label for="filler-syrup" class="sorting__label"> сиропы </label>
+              <input id="filler-jam" class="sorting__input sorting__input--type-checkbox" type="checkbox" name="filler-jam">
+              <label for="filler-jam" class="sorting__label"> джемы </label>
             </div>
           </fieldset>
           <button class="sorting-item-wrapper sorting__button " type="submit" name="button-form-sorting">Применить</button>
@@ -169,147 +158,160 @@
       </section>
       <ul class="calalog-list inner-page__catalog">
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-4.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-4.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-6.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-6.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-7.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-7.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-8.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-8.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-9.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-9.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+
+            <img class="catalog-item__image" src="img/catalog-preview-11.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-11.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-1.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-1.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-3.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-3.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-10.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class="catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-10.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class="catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-12.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-12.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-2.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-2.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class=" catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="catalog-item__wrapper-image">
+            <img class="catalog-item__image" src="img/catalog-preview-5.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
+            <p class="catalog-item__price">310 <span class="catalog-item__price--measure">/кг</span></p>
+          </div>
           <h3 class="catalog-item__title">
             <a class="link catalog-item__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
-          <img class="catalog-item__image" src="img/catalog-preview-5.png" width="267" height="267" alt="Мороженное  светло-коричневого цвета с присыпкой из тертого шоколада">
-          <span class="catalog-item__flag">хит</span>
-          <p class="catalog-item__price">310 <span class="catalog-item__price--measure">/кг</span></p>
           <div class="catalog-item__container">
             <a class="button catalog-item__button" href="#">Быстрый просмотр</a>
           </div>
         </li>
-        <!--+ еще 11 блоков -->
+
       </ul>
       <ul class="paginator">
-        <li class="paginator-item "><a class="paginator-item__link paginator-item__link--disable">Назад</a></li>
+        <li class="paginator-item "><a class="paginator-item__link paginator-item__link--back paginator-item__link--disable">Назад</a></li>
         <li class="paginator-item "><a class="paginator-item__link paginator-item__link--current">1</a></li>
         <li class="paginator-item "><a class="paginator-item__link" href="#2">2</a></li>
         <li class="paginator-item "><a class="paginator-item__link" href="#3">3</a></li>
         <li class="paginator-item "><a class="paginator-item__link" href="#4">4</a></li>
         <li class="paginator-item "><a class="paginator-item__link" href="#5">5</a></li>
-        <li class="paginator-item "><a class="paginator-item__link" href="#next">Вперед</a></li>
+        <li class="paginator-item "><a class="paginator-item__link paginator-item__link--next" href="#next">Вперед</a></li>
       </ul>
     </main>
     <footer class="page-footer">
