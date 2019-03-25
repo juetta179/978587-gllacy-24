@@ -136,6 +136,10 @@ html {
   background-color: transparent;
 }
 
+.slider-controls label:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 #product-1:checked~.site-wrapper {
   background-color: #849d8f;
   background-image: url('../img/slider-ice-1.png');
@@ -250,6 +254,7 @@ html {
 
 .navigation-list__item {
   position: relative;
+  padding-bottom: 20px;
 }
 
 .navigation-list__link {
@@ -303,6 +308,7 @@ html {
   width: 143px;
   background-color: white;
   padding-bottom: 7px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .navigation-list__item>.navigation__nested-list {
@@ -373,6 +379,7 @@ html {
   display: block;
   margin-left: 12px;
   padding: 0;
+  padding-bottom: 20px;
 }
 
 .user-navigation__icon {
@@ -425,6 +432,7 @@ html {
 .user-navigation__popup-form {
   top: 37px;
   right: -2px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .user-navigation__form-login {
@@ -484,17 +492,27 @@ html {
 .input {
   font-family: roboto, arial, sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 22px;
   padding: 10px;
   text-decoration: none;
-  color: #999;
+  color: #000;
   border-width: 1px;
   border-style: solid;
   border-color: #d3d3d2;
   border-radius: 5px;
   background-color: white;
   box-shadow: none;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 1px #d3d3d2;
+}
+
+.input:focus {
+  border-color: rgba(46, 136, 228, .52);
+  box-shadow: 0 0 0 1px rgba(46, 136, 228, .52);
+  outline: none;
 }
 
 .button {
@@ -652,6 +670,7 @@ html {
   align-items: flex-end;
   flex-direction: column;
   color: white;
+  margin-top: -5px;
 }
 
 .header-contacts__text {
@@ -1192,6 +1211,15 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, .5);
+  opacity: 0.8;
+}
+
+.social-item__link:active {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .5), inset 0px 0px 10px 10px rgba(88, 88, 88, 0.2);
+}
+
+.social-item__link:hover {
+  opacity: 1;
 }
 
 .social-item__link--twitter {
@@ -1341,27 +1369,76 @@ html {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 12;
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(32, 32, 32, .5);
 }
 
 .feedback {
-  position: relative;
-  top: 100px;
-  width: 480px;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  width: 477px;
+  padding-top: 15px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 10px;
 }
 
 .feedback-form {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.feedback__text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.feedback-form__input {
+  width: 267px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding-left: 13px;
+}
+
+.feedback-form__input--text {
+  width: 100%;
 }
 
 .feedback__button {
+  display: block;
   text-shadow: none;
+  margin-top: 7px;
+  margin-left: auto;
+  align-items: flex-end;
+  padding-right: 25px;
+}
+
+.feedback__button-close {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 30px;
+  background-image: url("../img/cross-big.svg");
+  background-position: center;
+  border-radius: 0px;
+  background-repeat: no-repeat;
+  margin-right: 11px;
+  margin-left: 0px;
+  margin-top: 8px;
 }
 
 /* Внутренняя страница*/
@@ -1401,7 +1478,7 @@ html {
 }
 
 .inner-page {
-  margin-top: -40px;
+  margin-top: -60px;
 }
 
 .inner-page__title {
@@ -1613,6 +1690,19 @@ html {
   color: white;
   border: solid 2px white;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.sorting__button:hover {
+  background-color: white;
+  color: black;
+}
+
+.sorting__button:active {
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
+  color: black;
+  border-color: transparent;
 }
 
 .sorting-item-wrapper--toggle {
@@ -1629,6 +1719,7 @@ html {
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-size: 100%;
+  cursor: pointer;
 }
 
 .toggle--1 {
