@@ -450,14 +450,6 @@ html {
   align-items: center;
 }
 
-.form-login__button {
-  margin-right: 20px;
-  margin-left: 5px;
-  padding-right: 24px;
-  padding-left: 23px;
-  text-shadow: none;
-}
-
 .popup-form {
   position: absolute;
   z-index: 1;
@@ -550,6 +542,14 @@ html {
   color: white;
 }
 
+.form-login__button {
+  margin-right: 20px;
+  margin-left: 5px;
+  padding-right: 24px;
+  padding-left: 23px;
+  text-shadow: none;
+}
+
 .link:hover {
   color: #ffbc9e;
 }
@@ -613,6 +613,7 @@ html {
   margin-right: 11px;
   margin-left: 0px;
   margin-top: 8px;
+  cursor: pointer;
 }
 
 .shopping-cart-nested__preview {
@@ -663,6 +664,7 @@ html {
   letter-spacing: -0.5px;
   padding-right: 17px;
   padding-left: 16px;
+  text-shadow: none;
 }
 
 .header-contacts {
@@ -764,6 +766,7 @@ html {
   line-height: 22px;
   text-align: left;
   color: white;
+  width: 100%;
 }
 
 .stock-item__button {
@@ -793,15 +796,17 @@ html {
   margin: 0;
   margin-bottom: 36px;
   padding: 0;
+  z-index: 1;
 }
 
 .catalog-item__wrapper-image {
   position: relative;
+  z-index: 6;
 }
 
 .catalog-item__wrapper-image--flag::before {
   position: absolute;
-  z-index: 6;
+  z-index: 7;
   top: -1px;
   left: -1px;
   display: block;
@@ -817,12 +822,15 @@ html {
 
 .catalog-item__title {
   margin-top: 13px;
+  z-index: 6
 }
 
 .catalog-item__link {
   line-height: 23px;
   display: block;
   text-align: center;
+  position: relative;
+  z-index: 6;
 }
 
 .catalog-item__image {
@@ -898,7 +906,7 @@ html {
 
 .catalog-item:hover>.catalog-item__container {
   position: absolute;
-  z-index: 6;
+  z-index: 5;
   top: 324px;
   display: block;
 }
@@ -1137,12 +1145,9 @@ html {
 
 .contacts__button {
   align-self: center;
-  align-self: center;
-  margin-top: 25px;
   margin-top: 25px;
   padding: 10px 30px;
   letter-spacing: -.5px;
-  text-shadow: none;
   text-shadow: none;
 }
 
@@ -1439,6 +1444,7 @@ html {
   margin-right: 11px;
   margin-left: 0px;
   margin-top: 8px;
+  cursor: pointer;
 }
 
 /* Внутренняя страница*/
@@ -1467,6 +1473,7 @@ html {
   height: 6px;
   content: '»';
   color: white;
+  text-decoration: none;
 }
 
 .breadcrumbs-item__link--current {
